@@ -16,5 +16,12 @@ public class Catalogue : ScriptableObject
             items.Add(itemToAdd);
         }       
     }
+    public void RemoveItem(Item itemToRemove)
+    {
+        if (items.Contains(itemToRemove))
+        {
+            items.Remove(itemToRemove);
+        }
+    }
 
 }

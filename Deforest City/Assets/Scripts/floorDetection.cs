@@ -8,6 +8,7 @@ public class floorDetection : MonoBehaviour
     
     public BoxCollider detectionArea;
     public Catalogue catalogue;
+    public Item item;
     
 
 
@@ -21,5 +22,20 @@ public class floorDetection : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Plant") && !other.isTrigger)
+        {
+            catalogue.AddItem(item);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Plant") && !other.isTrigger)
+        {
+            catalogue.RemoveItem(item);
+        }
     }
 }
