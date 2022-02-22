@@ -1,0 +1,62 @@
+[33mcommit e1643dbc6abb63413c3212bbc481cce78c0e6827[m[33m ([m[1;36mHEAD -> [m[1;32methan-camera-controls[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/ethan-camera-controls[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: 3d973d7 8e2aff7
+Author: OlivierJHebert <jarrod1999@gmail.com>
+Date:   Mon Dec 20 14:55:27 2021 -0500
+
+    Merge pull request #1 from colin-fang/olivier-testing-tools
+    
+    DC-21: Add Device Simulator package + Remote Device configs
+
+[33mcommit 8e2aff7973c1f9ab506c3f16ab0bc69adda74cf0[m[33m ([m[1;31morigin/olivier-testing-tools[m[33m)[m
+Merge: 33b2945 3d973d7
+Author: OlivierJHebert <jarrod1999@gmail.com>
+Date:   Mon Dec 20 14:54:42 2021 -0500
+
+    Merge branch 'main' into olivier-testing-tools
+
+[33mcommit 33b2945148aadb2526e3d29d3aa8c0aff7fc11d8[m
+Author: OlivierJHebert <jarrod1999@gmail.com>
+Date:   Mon Dec 20 14:52:42 2021 -0500
+
+    DC-21: Add Device Simulator package + Remote Device configs to project settings
+    
+    DC-21: adds testing tooling to project (see ticket in Jira for details)
+
+[33mcommit 3d973d7dabc5c6ef3ca39e3877cf22b5b13389b1[m
+Author: colin-fang <46767117+colin-fang@users.noreply.github.com>
+Date:   Sun Dec 19 10:52:27 2021 -0500
+
+    Scriptable Objects
+    
+    Scriptable Object item, and catalogue set up
+    Scriptable Object Signal Object set up
+
+[33mcommit 432ce0a8824dae055c86041db2a8cb2cd93ade20[m
+Author: colin-fang <46767117+colin-fang@users.noreply.github.com>
+Date:   Sat Dec 18 11:38:38 2021 -0500
+
+    update to editor version 2021.2.5f1
+
+[33mcommit 5a402f4e2ff5149161f22001de40958c3c48ef9b[m
+Author: colin-fang <46767117+colin-fang@users.noreply.github.com>
+Date:   Fri Nov 19 17:55:08 2021 -0500
+
+    test
+
+[33mcommit 385b67667a0edfac5f38fd39aa4156b4463b3c33[m
+Author: colin-fang <46767117+colin-fang@users.noreply.github.com>
+Date:   Fri Nov 19 17:54:39 2021 -0500
+
+    test
+
+[33mcommit b2e5bdaacf972a3c61e7b39af58a5e6869593736[m
+Author: colin-fang <46767117+colin-fang@users.noreply.github.com>
+Date:   Fri Nov 19 17:54:03 2021 -0500
+
+    Initial test
+
+[33mcommit 76c206a7c5ee39c37d12705d4cf5fcc4b36dcf9c[m
+Author: colin-fang <46767117+colin-fang@users.noreply.github.com>
+Date:   Fri Nov 19 17:50:33 2021 -0500
+
+    Initial commit
