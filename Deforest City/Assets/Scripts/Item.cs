@@ -7,7 +7,12 @@ public class Item : ScriptableObject
 {
 
     public GameObject itemObject;
-    public string itemDescription;
+    public string itemName;
     public bool isPlant;
+
+    public string GetName()
+    {
+        return itemName;
+    }
 
 }

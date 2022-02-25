@@ -7,9 +7,8 @@ public class floorDetection : MonoBehaviour
     //This script should detect an item within a box collider and add the item to the catalogue scriptable object
     
     public BoxCollider detectionArea;
-    public Catalogue catalogue;
-    public Item item;
-    
+    public Catalogue itemsFound;
+    public Catalogue items;
 
 
     // Start is called before the first frame update
@@ -28,14 +27,38 @@ public class floorDetection : MonoBehaviour
     {
         if (other.CompareTag("Plant") && !other.isTrigger)
         {
-            catalogue.AddItem(item);
+            switch (other.name){
+                case "PlantA":
+                    itemsFound.AddItem(items.GetItem("PlantA"));
+                    Debug.Log(other.name);
+                    break;
+                case "PlantB":
+                    itemsFound.AddItem(items.GetItem("PlantB"));
+                    Debug.Log(other.name);
+                    break;
+                case "PlantC":
+                    itemsFound.AddItem(items.GetItem("PlantC"));
+                    Debug.Log(other.name);
+                    break;
+            }
         }
     }
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionExit(Collider other)
     {
         if (other.CompareTag("Plant") && !other.isTrigger)
         {
-            catalogue.RemoveItem(item);
+            switch (other.name)
+            {
+                case "PlantA":
+                    itemsFound.RemoveItem(items.GetItem("PlantA"));
+                    break;
+                case "PlantB":
+                    itemsFound.RemoveItem(items.GetItem("PlantB"));
+                    break;
+                case "PlantC":
+                    itemsFound.RemoveItem(items.GetItem("PlantC"));
+                    break;
+            }
         }
     }
 }

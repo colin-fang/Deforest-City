@@ -10,11 +10,12 @@ public class Catalogue : ScriptableObject
     public List<Item> items = new List<Item>();
 
     public void AddItem(Item itemToAdd)
-    {        
-        if (!items.Contains(itemToAdd))
+    {
+        items.Add(itemToAdd);
+       /* if (!items.Contains(itemToAdd))
         {
             items.Add(itemToAdd);
-        }       
+        }       */
     }
     public void RemoveItem(Item itemToRemove)
     {
@@ -22,6 +23,18 @@ public class Catalogue : ScriptableObject
         {
             items.Remove(itemToRemove);
         }
+    }
+    public Item GetItem(string name)
+    {
+        for (int i = 0; i < items.Count; i++){
+            Debug.Log("loop" + items[i].GetName());
+            if(items[i].GetName() == name)
+            {
+                Debug.Log("Catalogue" + items[i].GetName());
+                return items[i];
+            }
+        }
+        return null;
     }
 
 }
