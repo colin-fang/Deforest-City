@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62e45a0b1fccc82469262206960f0522, type: 3}
-  m_Name: Plant
+  m_Script: {fileID: 11500000, guid: 8144214970c72d94e86ae2423bfb48fb, type: 3}
+  m_Name: Found_Items
   m_EditorClassIdentifier: 
-  itemObject: {fileID: 3868838427421748448, guid: 384c6814adf3f4c43a877ec4e48067d1,
-    type: 3}
-  itemDescription: is a tree
-  isPlant: 1
+  currentItem: {fileID: 0}
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
