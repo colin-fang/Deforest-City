@@ -40,6 +40,10 @@ public class floorDetection : MonoBehaviour
                     itemsFound.AddItem(items.GetItem("PlantC"));
                     Debug.Log(other.name);
                     break;
+                case "Tree Type1 01":
+                    itemsFound.AddItem(items.GetItem("Tree Type1 01"));
+                    Debug.Log(other.name);
+                    break;
             }
         }
     }
@@ -57,6 +61,9 @@ public class floorDetection : MonoBehaviour
                     break;
                 case "PlantC":
                     itemsFound.RemoveItem(items.GetItem("PlantC"));
+                    break;
+                case "Tree Type1 01":
+                    itemsFound.RemoveItem(items.GetItem("Tree Type1 01"));
                     break;
             }
         }
