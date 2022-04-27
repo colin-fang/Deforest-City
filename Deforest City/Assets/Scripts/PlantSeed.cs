@@ -5,11 +5,9 @@ using UnityEngine;
 public class PlantSeed : MonoBehaviour
 {
     public GameObject tree;
-    public GameObject tree2;
-    public GameObject tree3;
-    public GameObject randTree;
     public Catalogue itemsFound;
     public Catalogue items;
+    public Canvas catalogueCanvas;
     void Start()
     {
         
@@ -17,8 +15,8 @@ public class PlantSeed : MonoBehaviour
 
     void Update()
     {
-        
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        tree = CatalogueUI.seedSelected;
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !catalogueCanvas.gameObject.activeSelf)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit hit;
@@ -27,21 +25,8 @@ public class PlantSeed : MonoBehaviour
             {
                 if (hit.transform.gameObject.CompareTag("Terrain"))
                 {
-                    Instantiate(randTree, hit.point, Quaternion.Euler(0f, 0f, 0f)).transform.localScale = 
+                    Instantiate(tree, hit.point, Quaternion.Euler(0f, 0f, 0f)).transform.localScale = 
                         new Vector3(1f, 1f, 1f);
-                    if (randTree == tree)
-                    {
-                        itemsFound.AddItem(items.GetItem("Tree Type1 01"));
-                        randTree = tree2;
-                    }else if (randTree == tree2)
-                    {
-                        itemsFound.AddItem(items.GetItem("Tree Type1 02"));
-                        randTree = tree3;
-                    }else if (randTree == tree3)
-                    {
-                        itemsFound.AddItem(items.GetItem("Tree Type1 03"));
-                        randTree = tree;
-                    }
                 }
             }
         }
