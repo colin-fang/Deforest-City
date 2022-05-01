@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\EmperorGesar\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\EmperorGesar\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Deforest City.-1469213530.00" t="ExcludeRecursive" />
+    <e p="D:\UWO\senior\cs4480\repo\4.27\Deforest-City\Deforest City" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="GyroManager" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="FollowGyro.cs" t="Include" />
+            <e p="GyroManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="BillingMode.json" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="ButtonLogic.cs" t="Include" />
+          <e p="Catalogue.cs" t="Include" />
+          <e p="CatalogueUI.cs" t="Include" />
+          <e p="Database.cs" t="Include" />
+          <e p="floorDetection.cs" t="Include" />
+          <e p="HealthManager.cs" t="Include" />
+          <e p="Item.cs" t="Include" />
+          <e p="LookCamera.cs" t="Include" />
+          <e p="PlantSeed.cs" t="Include" />
+          <e p="SignalListener.cs" t="Include" />
+          <e p="SignalObject.cs" t="Include" />
+          <e p="Touchpad.cs" t="Include" />
+        </e>
+        <e p="Third Party" t="Include">
+          <e p="BrokenVector" t="Include">
+            <e p="LowPolyTreePack" t="Include">
+              <e p="README.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Supercyan Free Forest Sample" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="Legacy" t="Include">
+                <e p="CelShader.shader" t="Include" />
+              </e>
+              <e p="SupercyanShader.shader" t="Include" />
+              <e p="SupercyanShaderLighting.cginc" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Deforest City.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
