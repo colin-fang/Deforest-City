@@ -17,6 +17,7 @@ public class Catalogue : ScriptableObject
             items.Add(itemToAdd);
         }       */
     }
+    
     public void RemoveItem(Item itemToRemove)
     {
         if (items.Contains(itemToRemove))
@@ -26,15 +27,15 @@ public class Catalogue : ScriptableObject
     }
     public Item GetItem(string name)
     {
-        for (int i = 0; i < items.Count; i++){
-            Debug.Log("loop" + items[i].GetName());
+        for (int i = 0; i < items.Count; i++)
+        {
+            // Debug.Log("loop" + items[i].GetName());
             if(items[i].GetName() == name)
             {
-                Debug.Log("Catalogue" + items[i].GetName());
+                // Debug.Log("Catalogue" + items[i].GetName());
                 return items[i];
             }
         }
         return null;
     }
-
 }

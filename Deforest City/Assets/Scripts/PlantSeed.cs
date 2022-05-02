@@ -27,6 +27,16 @@ public class PlantSeed : MonoBehaviour
                 {
                     Instantiate(tree, hit.point, Quaternion.Euler(0f, 0f, 0f)).transform.localScale = 
                         new Vector3(1f, 1f, 1f);
+                    if (tree.gameObject.name == "Tree Type1 01")
+                    {
+                        itemsFound.AddItem(items.GetItem("Tree Type1 01"));
+                    } else if (tree.gameObject.name == "Tree Type1 02")
+                    {
+                        itemsFound.AddItem(items.GetItem("Tree Type1 02"));
+                    } else if (tree.gameObject.name == "Tree Type1 03")
+                    {
+                        itemsFound.AddItem(items.GetItem("Tree Type1 03"));
+                    }
                 }
             }
         }

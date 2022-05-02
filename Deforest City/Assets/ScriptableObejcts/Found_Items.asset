@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: Found_Items
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  items:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  items: []
