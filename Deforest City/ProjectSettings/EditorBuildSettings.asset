@@ -6,27 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Growing Scene.unity
-    guid: e52a1d3bf067f7f4baff3c3f4a1c7b3d
+    path: Assets/Scenes/Map Scene.unity
+    guid: ef4fde56bb7429445b42a1de8602d1fb
   - enabled: 1
     path: Assets/Scenes/Barren Scene.unity
     guid: c46d953491f72a74d83f58a9d769814a
   - enabled: 1
-    path: Assets/Scenes/Demo Area.unity
-    guid: 3cb75a1996d97a241a712580bdcaa163
-  - enabled: 1
-    path: Assets/Scenes/Generic Forest.unity
-    guid: 66992fbe1fe32b24bab59af112f39674
+    path: Assets/Scenes/Growing Scene.unity
+    guid: e52a1d3bf067f7f4baff3c3f4a1c7b3d
   - enabled: 1
     path: Assets/Scenes/Lush Scene.unity
     guid: 16828bd67d80e4a48b32bebd354f2d7d
-  - enabled: 1
-    path: Assets/Scenes/Map Scene.unity
-    guid: ef4fde56bb7429445b42a1de8602d1fb
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/ScriptableObjectsTestScene.unity
-    guid: f742dc9e7ca932841bc4c71d32647a16
   m_configObjects: {}
