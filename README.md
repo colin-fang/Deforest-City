@@ -18,7 +18,3 @@ this is the repo for the 2021-2022 4480 Game Project Course for Deforest City
 - Android: Turn on the developer options
 
 - In Unity, set up the device in player settings
-
-## Screenshot
-
-![Image](https://github.com/colin-fang/Deforest-City/blob/johnny-catalogue-ui/screenshot.jpg)
