@@ -8,6 +8,12 @@ public class PlantSeed : MonoBehaviour
     public Catalogue itemsFound;
     public Catalogue items;
     public Canvas catalogueCanvas;
+
+
+    public Item plant1;
+    public Item plant2;
+    public Item plant3;
+
     void Start()
     {
         
@@ -29,13 +35,13 @@ public class PlantSeed : MonoBehaviour
                         new Vector3(1f, 1f, 1f);
                     if (tree.gameObject.name == "Tree Type1 01")
                     {
-                        itemsFound.AddItem(items.GetItem("Tree Type1 01"));
+                        itemsFound.AddItem(plant1);
                     } else if (tree.gameObject.name == "Tree Type1 02")
                     {
-                        itemsFound.AddItem(items.GetItem("Tree Type1 02"));
+                        itemsFound.AddItem(plant2);
                     } else if (tree.gameObject.name == "Tree Type1 03")
                     {
-                        itemsFound.AddItem(items.GetItem("Tree Type1 03"));
+                        itemsFound.AddItem(plant3);
                     }
                 }
             }

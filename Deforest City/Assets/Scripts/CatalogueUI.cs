@@ -17,6 +17,11 @@ public class CatalogueUI : MonoBehaviour
     public GameObject seed1;
     public GameObject seed2;
     public GameObject seed3;
+
+    public Item plant1;
+    public Item plant2;
+    public Item plant3;
+
     
     public static GameObject seedSelected;
     private string seedName;
@@ -61,15 +66,15 @@ public class CatalogueUI : MonoBehaviour
             seedSelected = seed3;
         }
 
-        if (itemsFound.GetItem("Tree Type1 01") != null)
+        if (!itemsFound.items.Contains(plant1))
         {
             tree1.gameObject.SetActive(true);
         } 
-        if (itemsFound.GetItem("Tree Type1 02") != null)
+        if (!itemsFound.items.Contains(plant2))
         {
             tree2.gameObject.SetActive(true);
         } 
-        if (itemsFound.GetItem("Tree Type1 03") != null)
+        if (!itemsFound.items.Contains(plant2))
         {
             tree3.gameObject.SetActive(true);
         }
