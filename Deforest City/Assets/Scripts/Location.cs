@@ -18,69 +18,70 @@ public class Location : MonoBehaviour
     public int maxplant2 = 4;
     public int minplant3 = 1;
     public int maxplant3 = 5;
-    
 
-    public int stage = 1;
+    public int locationID;
+
+    public int stage = 2;
 
     public Image image;
     public Sprite sprite1;
     public Sprite sprite2;
     public Sprite sprite3;
 
-
     public string scene1;
     public string scene2;
     public string scene3;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        image = gameObject.GetComponent<Image>();
+        if (locationID == itemsFound.locationID)
+        {
+            image = gameObject.GetComponent<Image>();
+            stage = itemsFound.stage;
 
-        while (itemsFound.items.Count > 0)
-        {
-            switch (itemsFound.items.Dequeue().itemName)
+            while (itemsFound.items.Count > 0)
             {
-                case "Tree Type1 01":
-                    plantCount1 += 1;
+                switch (itemsFound.items.Dequeue().itemName)
+                {
+                    case "Tree Type1 01":
+                        plantCount1 += 1;
+                        break;
+                    case "Tree Type1 02":
+                        plantCount2 += 1;
+                        break;
+                    case "Tree Type1 03":
+                        plantCount3 += 1;
+                        break;
+                }
+            }
+            if(minplant1 < plantCount1 && plantCount1 < maxplant1 
+                                       && minplant2 < plantCount2 && plantCount2 < maxplant2 
+                                       && minplant3 < plantCount3 && plantCount3 < maxplant3)
+            {
+                if(stage < 3)
+                {
+                    stage += 1;
+                }
+            }
+            else
+            {
+                if(stage > 1)
+                {
+                    stage -= 1;
+                }
+            }
+            switch (stage)
+            {
+                case 1:
+                    image.sprite = sprite1;
                     break;
-                case "Tree Type1 02":
-                    plantCount2 += 1;
+                case 2:
+                    image.sprite = sprite2;
                     break;
-                case "Tree Type1 03":
-                    plantCount3 += 1;
+                case 3:
+                    image.sprite = sprite3;
                     break;
             }
-        }
-        if(minplant1 < plantCount1 && plantCount1 < maxplant1 
-            && minplant2 < plantCount2 && plantCount2 < maxplant2 
-            && minplant3 < plantCount3 && plantCount3 < maxplant3)
-        {
-            if(stage < 3)
-            {
-                stage += 1;
-            }
-        }
-        else
-        {
-            if(stage > 1)
-            {
-                stage -= 1;
-            }
-        }
-        switch (stage)
-        {
-            case 1:
-                image.sprite = sprite1;
-                break;
-            case 2:
-                image.sprite = sprite2;
-                break;
-            case 3:
-                image.sprite = sprite3;
-                break;
         }
     }
 
@@ -92,18 +93,19 @@ public class Location : MonoBehaviour
     
     public void LoadScene()
     {
+        itemsFound.locationID = locationID;
+        itemsFound.stage = stage;
         switch (stage)
         {
             case 1:
                 SceneManager.LoadScene(scene1);
                 break;
             case 2:
-                SceneManager.LoadScene(scene1);
+                SceneManager.LoadScene(scene2);
                 break;
             case 3:
-                SceneManager.LoadScene(scene1);
+                SceneManager.LoadScene(scene3);
                 break;
         }
     }
-
 }

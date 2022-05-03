@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CatalogueUI : MonoBehaviour
@@ -22,7 +23,6 @@ public class CatalogueUI : MonoBehaviour
     public Item plant2;
     public Item plant3;
 
-    
     public static GameObject seedSelected;
     private string seedName;
     private string treeName;
@@ -31,7 +31,7 @@ public class CatalogueUI : MonoBehaviour
     void Start()
     {
         seedName = "";
-        seedSelected = seed1;
+        seedSelected = plant1.itemObject;
         overview = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
                    "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, " +
                    "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo " +
@@ -55,26 +55,26 @@ public class CatalogueUI : MonoBehaviour
     {
         if (seedName == "Seed 1")
         {
-            seedSelected = seed1;
+            seedSelected = plant1.itemObject;
         } 
         else if (seedName == "Seed 2")
         {
-            seedSelected = seed2;
+            seedSelected = plant2.itemObject;
         }
         else if (seedName == "Seed 3")
         {
-            seedSelected = seed3;
+            seedSelected = plant3.itemObject;
         }
 
-        if (!itemsFound.items.Contains(plant1))
+        if (itemsFound.items.Contains(plant1))
         {
             tree1.gameObject.SetActive(true);
         } 
-        if (!itemsFound.items.Contains(plant2))
+        if (itemsFound.items.Contains(plant2))
         {
             tree2.gameObject.SetActive(true);
         } 
-        if (!itemsFound.items.Contains(plant2))
+        if (itemsFound.items.Contains(plant3))
         {
             tree3.gameObject.SetActive(true);
         }
@@ -103,5 +103,10 @@ public class CatalogueUI : MonoBehaviour
     {
         catalogueCanvas.gameObject.SetActive(true);
         ingameCanvas.gameObject.SetActive(false);
+    }
+
+    public void Map()
+    {
+        SceneManager.LoadScene("Map Scene");
     }
 }
