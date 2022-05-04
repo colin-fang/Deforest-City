@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Map Scene.unity
+    guid: ef4fde56bb7429445b42a1de8602d1fb
+  - enabled: 1
+    path: Assets/Scenes/Barren Scene.unity
+    guid: c46d953491f72a74d83f58a9d769814a
+  - enabled: 1
+    path: Assets/Scenes/Growing Scene.unity
+    guid: e52a1d3bf067f7f4baff3c3f4a1c7b3d
+  - enabled: 1
+    path: Assets/Scenes/Lush Scene.unity
+    guid: 16828bd67d80e4a48b32bebd354f2d7d
   m_configObjects: {}

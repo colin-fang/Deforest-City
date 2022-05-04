@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e45a0b1fccc82469262206960f0522, type: 3}
   m_Name: Tree Type1 03
   m_EditorClassIdentifier: 
-  itemObject: {fileID: 0}
+  itemObject: {fileID: 7583853144602994742, guid: bfcbb7d93d169d8488662645386c1b4a, type: 3}
   itemName: Tree Type1 03
   isPlant: 1

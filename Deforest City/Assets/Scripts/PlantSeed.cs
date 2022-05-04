@@ -5,12 +5,18 @@ using UnityEngine;
 public class PlantSeed : MonoBehaviour
 {
     public GameObject tree;
+    public static Queue<GameObject> treeAdded;
     public Catalogue itemsFound;
     public Catalogue items;
     public Canvas catalogueCanvas;
+    
+    public Item plant1;
+    public Item plant2;
+    public Item plant3;
+
     void Start()
     {
-        
+        treeAdded = new Queue<GameObject>();
     }
 
     void Update()
@@ -25,8 +31,19 @@ public class PlantSeed : MonoBehaviour
             {
                 if (hit.transform.gameObject.CompareTag("Terrain"))
                 {
-                    Instantiate(tree, hit.point, Quaternion.Euler(0f, 0f, 0f)).transform.localScale = 
-                        new Vector3(1f, 1f, 1f);
+                    treeAdded.Enqueue(Instantiate(tree, hit.point, Quaternion.Euler(0f, 0f, 0f)));
+                    if (tree.gameObject.name == "Tree Type1 01")
+                    {
+                        itemsFound.AddItem(plant1);
+                    } 
+                    else if (tree.gameObject.name == "Tree Type1 02")
+                    {
+                        itemsFound.AddItem(plant2);
+                    } 
+                    else if (tree.gameObject.name == "Tree Type1 03")
+                    {
+                        itemsFound.AddItem(plant3);
+                    }
                 }
             }
         }

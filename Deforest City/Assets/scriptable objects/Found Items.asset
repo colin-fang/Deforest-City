@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Found Items
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  items: []
+  locationID: 3
+  stage: 3
